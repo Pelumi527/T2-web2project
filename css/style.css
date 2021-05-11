@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Noto+Sans:ital@0;1&display=swap');
+
+*, *::after, 
+    *::before{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+@media(min-width:700px){
+
+    a{
+        text-decoration: none;
+        color: black;
+        font-family: "Arvo", sans-serif;
+        display: inline-block;
+    }
+
+    a:hover{
+        color: rgb(108, 108, 240);
+    }
+
+    li{
+        list-style: none;
+    }
+
+    button{
+        font-family: "Arvo", sans-serif;
+        display: inline-block;
+    }
+
+    
+    
+
+    p{
+        font-family: "Arvo", sans-serif;
+        font-size: 16px;
+    }
+
+    h1, h2, h5{
+        font-family: 'Noto Sans', sans-serif;
+    }
+
+    span{
+        font-family: "Arvo", sans-serif;
+        font-weight: bold;
+    }
+
+    #crypto, #market, #marchange{
+        padding-right: 2rem;
+        color: blue;
+    }
+
+    .metrics{
+        display: flex;
+        margin: 1rem;
+    }
+
+    .nav-bar{
+        display: grid;
+        grid-template-columns: 1fr 4fr 2fr;
+        margin-bottom: 50px;
+        padding: 30px 10px;
+    }
+
+    .logo img{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+    }
+
+    .logo a{
+        font-size: 20px;
+        font-weight: 700;
+        padding-left: 2px;
+    }
+
+    .logo a:hover{
+       color: black;
+    }
+    
+    .nav ul{
+        margin-left: 15px;
+    }
+
+
+    .nav ul li{
+        display: inline-block;
+    }
+
+    .nav ul li a{
+        padding-left: 10px;
+        font-size: 15px;
+    }
+
+
+    .search-bar input[type="text"]{
+        width: 300px;
+        height: 35px;
+        border: 1px solid rgb(212, 210, 210);
+        outline: 0px;
+    }
+
+    ::placeholder{
+        color: grey;
+        padding-left: 5px;
+        font-family: "Arvo", sans-serif;
+    }
+
+    .table{
+        width: 100%;
+        margin-top: 50px 0;
+    }
+
+    th, td{
+        padding: 1rem 0px;
+        font-family: 'Noto Sans', sans-serif;
+        border-bottom: 1px solid rgb(247, 243, 243);
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .subscribe{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        background-color: rgb(253, 251, 251);
+        padding:8rem 2rem;
+    }
+
+    .hero-text h1{
+        font-weight: normal; 
+        margin-bottom: 10px;  
+    }
+
+    .hero-text h1 span{
+        font-weight: bolder;
+    }
+
+
+    .subscribe-btn{
+        margin-left: 60px;
+        margin-top: 40px;
+    }
+
+    .subscribe-btn input[type="text"]{
+        width: 308px;
+        height: 48px;
+        border-radius: 8px;
+        border: 1px solid rgb(212, 210, 210);
+        outline: 0px;
+        padding: 0px 16px;
+        font-size: 14px;
+        background-color: white;
+        line-height: 1.5em;
+    }
+
+    .subscribe-btn button{
+        padding: 7px 10px;
+        background-color: rgb(56, 97, 251);
+        color: white;
+        border-radius: 8px;
+        height: 48px;
+        border: 0px;
+        font-weight: bolder;
+        cursor: pointer;
+    }
+
+    .subscribe-btn button:hover{
+        background-color: rgb(40, 78, 216);
+    }
+
+
+    .footer{
+        display: grid;
+        padding: 4rem 6rem;
+    }
+
+    .logo{
+       grid-column: 1/2;
+       grid-row: 1/2;
+       margin-bottom: 2rem;
+    }
+
+    .product{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .company{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    .support{
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+    .social{
+        grid-column: 4/5;
+        grid-row: 2/3;
+    }
+
+    .social, .support, .company, .product{
+        line-height: 25px;
+    }
+    .copyright{
+        grid-column: 1/5;
+        grid-row: 3/4;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
+    .copyright img{
+        width: 150px;
+        height: 70px;
+    }
+}
