@@ -28,41 +28,61 @@ fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
                     //-----star for loop
                     readAbleApi.map((u) => {
 
-                        temp += "<tr>";
-                         temp += "<td>" + u.symbol.toUpperCase()+"</td>"
-                         temp += "<td>" +u.name +"</td>"
-                         temp += "<td>" + formatDollar(u.current_price, 20)+"</td>"
-                         temp += "<td><span>" + formatPercent(u.price_change_percentage_24h)+"</span></td>"
-                         temp += "<td>" + formatDollar(u.market_cap, 12)+"</td>"
-                        temp += "<td>" + formatPercent(u.market_cap_change_percentage_24h)+"</td>"
-                        temp += "<td>" + formatDollar(u.total_volume)+"</td>"
-                        temp += "</tr>";
 
+                        const trow = document.createElement("tr");
 
+                        const tdata = document.createElement("td");
+                        const tdata1 = document.createElement("td");
+                        const tdata2 = document.createElement("td");
+                        const tdata3 = document.createElement("td");
+                        const tdata4 = document.createElement("td");
+                        const tdata5 = document.createElement("td");
+                        const tdata6 = document.createElement("td");
+                        const tdata7 = document.createElement("td");
+                        const tdata8 = document.createElement("td");
 
-                        document.getElementById("readAbleApi").innerHTML = temp;
-
-                        const col_1 = document.createElement("td")
                         const imgsrc = u.image
-                        const imgtag = document.createElement("img")
+                        const imgtag = document.createElement("img");
                         imgtag.src = imgsrc
-                        const tr = col_1.append(imgtag)
-                        console.log(tr)
-                         
-                        document.getElementById("row").appendChild(imgtag)
+                        const symbol = u.symbol.toUpperCase()
+                        const name  = u.name
+                        const price = formatDollar(u.current_price, 20)
+                        const priceChange = formatPercent(u.price_change_percentage_24h)
+                        const marketCap = formatDollar(u.market_cap, 12)
+                        const marketCapChange = formatPercent(u.market_cap_change_percentage_24h)
+                        const volume = formatDollar(u.total_volume)
 
-                   
+                        trow.append(tdata)
+                        trow.append(tdata1)
+                        trow.append(tdata2)
+                        trow.append(tdata3)
+                        trow.append(tdata4)
+                        trow.append(tdata5)
+                        trow.append(tdata6)
+                        trow.append(tdata7)
+                        trow.append(tdata8)
+
+                        tdata.append(imgtag)
+                        tdata1.append(symbol)
+                        tdata2.append(name)
+                        tdata3.append(price)
+                        tdata4.append(priceChange)
+                        tdata5.append(marketCap)
+                        tdata6.append(marketCapChange)
+                        tdata7.append(volume)
+                       
                         
 
+                        document.getElementById("row").appendChild(trow)
+                        
                         
 
-                        
 
+                        
+                        
                     })
 
                     //---close for loop
-                    
-                    
 
                     
                 }
